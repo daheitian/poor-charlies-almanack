@@ -1,0 +1,800 @@
+@font-face { font-family: "Cardinal Fruit"; src: url("../fonts/cardinalfruitweb-medium.woff2") format("woff2"); font-display: block; font-style: normal; }
+@font-face { font-family: "Cardinal Fruit"; src: url("../fonts/cardinalfruitweb-regular.woff2") format("woff2"); font-display: block; font-style: normal; font-weight: 300; }
+@font-face { font-family: "Cardinal Fruit"; src: url("../fonts/cardinalfruitweb-italic.woff2") format("woff2"); font-display: block; font-style: italic; font-weight: 300; }
+@font-face { font-family: "Cardinal Fruit"; src: url("../fonts/cardinalfruitweb-mediumitalic.woff2") format("woff2"); font-display: block; font-style: italic; font-weight: 400; }
+@font-face { font-family: "Suisse Mono"; src: url("../fonts/SuisseIntlMono-Regular.otf") format("opentype"); font-display: block; }
+@font-face { font-family: Suisse; src: url("../fonts/SuisseIntl-Regular.otf") format("opentype"); font-display: block; }
+@font-face { font-family: Ivar; font-style: italic; src: url("../fonts/ivartext-italic-webfont.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: Ivar; src: url("../fonts/ivartext-regular-webfont.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: Ivar; font-weight: 600; src: url("../fonts/ivartext-bold-webfont.woff2") format("woff2"); font-display: block; }
+body { background: rgb(239, 239, 239); margin: 0px; padding: 0px; font-family: "Cardinal Fruit"; -webkit-font-smoothing: antialiased; }
+.highlighted { position: relative; color: black; animation: 400ms linear 0s 1 normal forwards running animateHighlight; transition: background 500ms, box-shadow 100ms; background-image: linear-gradient(to left, rgb(255, 255, 255) 50%, rgba(255, 255, 0, 0.667) 50%); background-size: 200% 100%; cursor: pointer; background-position: right bottom; border-radius: 3px; }
+.highlighted::selection { background: rgba(255, 255, 255, 0.2); }
+.highlighted:hover { outline: rgba(45, 45, 45, 0.133) solid 1px; }
+:not(.highlighted)::selection { background: rgb(45, 45, 45); border-radius: 4px; color: rgb(239, 239, 239); height: 10px; }
+@-webkit-keyframes animateHighlight { 
+  0% { background-position: right bottom; }
+  100% { background-position: left bottom; }
+}
+@keyframes animateHighlight { 
+  0% { background-position: right bottom; }
+  100% { background-position: left bottom; }
+}
+*, ::before, ::after { box-sizing: border-box; }
+.jFPlVO { position: relative; width: 0px; height: 14px; border-left: 1px dashed rgb(45, 45, 45); }
+.jrLODX { width: 52px; height: 40px; margin: 0px 10px 0px auto; cursor: pointer; padding: 0px 10px 10px 15px; }
+.jrLODX .bookIcon__cover, .jrLODX .bookIcon__line1, .jrLODX .bookIcon__line2, .jrLODX .bookIcon__line3, .jrLODX .bookIcon__line4 { transition: 200ms; }
+.jrLODX:hover .bookIcon__cover { d: path("M 10 -50 L 10 58 C 10 58 10 58 10 76"); }
+.jrLODX:hover .bookIcon__line1 { d: path("M 30 0 L 30 76"); }
+.jrLODX:hover .bookIcon__line2 { d: path("M 67.5 10 L 30 76"); }
+.jrLODX:hover .bookIcon__line3 { d: path("M 95 38.5 L 30 76"); }
+.jrLODX:hover .bookIcon__line4 { d: path("M 100 76 L 30 76"); }
+.jrLODX .bookIcon__cover { d: path("M 100 58 L 30 58 C 30 58 10 58 10 76"); }
+.jrLODX .bookIcon__line1 { d: path("M 100 76 L 30 76"); }
+.jrLODX .bookIcon__line2 { d: path("M 100 76 L 30 76"); }
+.jrLODX .bookIcon__line3 { d: path("M 100 76 L 30 76"); }
+.jrLODX .bookIcon__line4 { d: path("M 100 76 L 30 76"); }
+.jrLODX path { stroke: rgb(45, 45, 45); fill: transparent; stroke-width: 3; }
+@media (max-width: 899px) {
+  .jrLODX .bookIcon__closed { display: block; }
+  .jrLODX .bookIcon__open { display: none; }
+}
+.jA-dGqI { position: fixed; top: 0px; left: 0px; right: 0px; height: 36px; margin: 0px; padding: 0px 12px; transition: background 300ms; font-size: 12px; font-family: "Suisse Mono"; letter-spacing: -0.03em; z-index: 300; background: rgb(239, 239, 239); color: rgb(45, 45, 45); }
+@media (min-width: 900px) {
+  .jA-dGqI { padding: 0px 18px; }
+}
+.jA-dGqI::after { content: ""; position: absolute; left: 0px; bottom: 0px; height: 1px; width: 100%; background: rgb(45, 45, 45); opacity: 0.2; }
+.jA-dGqI .TopNav__logo { width: 304px; height: auto; display: flex; }
+.dXXnC { width: 304px; height: auto; fill: rgb(45, 45, 45); }
+@media (max-width: 899px) {
+  .dXXnC .logoLine { display: none; }
+}
+@media (max-width: 899px) {
+  .dXXnC .logoTitle { transform: translateX(-10px); }
+}
+@media (max-width: 899px) {
+  .iqyLya { display: none; }
+}
+@media (max-width: 899px) {
+  .dsUeAP { display: none; }
+}
+.kAQLmg { display: flex; font-size: 12px; }
+.cnNLrb { position: relative; margin-left: 12px; margin-right: 12px; padding: 1px 8px 0px; border-radius: 40px; overflow: hidden; border: 1.25px solid; display: none; }
+@media (min-width: 900px) {
+  .cnNLrb { display: block; }
+}
+.cVLOWI { padding: 1px 8px 0px; position: absolute; left: 0px; top: 0px; color: rgb(239, 239, 239); }
+.oHhFA { position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background: rgb(45, 45, 45); transform-origin: 0px 0px; transform: scaleX(0); overflow: hidden; }
+.dMiBrw { display: flex; -webkit-box-align: center; align-items: center; gap: 0px; z-index: 2; height: 100%; }
+.evmxBv { will-change: transform; transform-origin: 0px 0px; }
+.SQxxC { position: absolute; will-change: transform; transform-origin: 0px 0px; user-select: none; top: 0px; left: calc(100% + 7px); white-space: nowrap; opacity: 0; transition: opacity 300ms; }
+.ekIyZZ { --chapterTitleWidth: 0; --chapterNumberWidth: 0; text-transform: uppercase; font-size: 11px; will-change: transform; transform-origin: 0px 0px; user-select: none; left: 0px; opacity: 0; width: calc(0px); display: none; height: 100%; padding-left: 12px; padding-right: 12px; overflow: hidden; transition: width 600ms; }
+.ekIyZZ:hover { width: 200px; }
+.ekIyZZ:hover .sc-211360a0-13 { animation: 0ms linear 0s infinite normal none running chapterMarquee; }
+@-webkit-keyframes chapterMarquee { 
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(calc(var(--chapterTitleWidth) * -1px)); }
+}
+@keyframes chapterMarquee { 
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(calc(var(--chapterTitleWidth) * -1px)); }
+}
+.ekIyZZ:hover .sc-211360a0-14 { opacity: 1; }
+@media (min-width: 900px) {
+  .ekIyZZ { opacity: 1; position: relative; display: flex; -webkit-box-align: center; align-items: center; }
+}
+.UCmok { --chapterTitleWidth: 805.2578125; --chapterNumberWidth: 98.21875; text-transform: uppercase; font-size: 11px; will-change: transform; transform-origin: 0px 0px; user-select: none; left: 0px; opacity: 0; width: calc(98.2188px); display: none; height: 100%; padding-left: 12px; padding-right: 12px; overflow: hidden; transition: width 600ms; }
+.UCmok:hover { width: 200px; }
+.UCmok:hover .sc-211360a0-13 { animation: 12078.9ms linear 0s infinite normal none running chapterMarquee; }
+@-webkit-keyframes chapterMarquee { 
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(calc(var(--chapterTitleWidth) * -1px)); }
+}
+@keyframes chapterMarquee { 
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(calc(var(--chapterTitleWidth) * -1px)); }
+}
+.UCmok:hover .sc-211360a0-14 { opacity: 1; }
+@media (min-width: 900px) {
+  .UCmok { opacity: 1; position: relative; display: flex; -webkit-box-align: center; align-items: center; }
+}
+.cEHIxm { white-space: nowrap; }
+.iekrzW { position: relative; font-family: "Cardinal Fruit"; font-size: 20px; top: 0px; left: 0px; width: 43px; cursor: pointer; }
+.dAnygA { position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; opacity: 0; cursor: pointer; }
+.iayJXs { display: flex; -webkit-box-align: center; align-items: center; -webkit-box-pack: justify; justify-content: space-between; width: 100%; height: 100%; }
+.gQVPlG { position: absolute; left: 18px; top: 0px; width: calc(100% - 36px); height: 100%; border-width: medium 1px; border-style: none solid; border-color: currentcolor rgb(45, 45, 45); border-image: none; z-index: 100; pointer-events: none; opacity: 0.2; }
+@media (max-width: 899px) {
+  .gQVPlG { display: none; }
+}
+.iHZGIy { position: absolute; left: 18px; top: 0px; width: calc(100% - 36px); height: 100%; border-width: medium 1px; border-style: none solid; border-color: currentcolor rgb(201, 201, 201); border-image: none; z-index: 100; pointer-events: none; opacity: 0.2; }
+@media (max-width: 899px) {
+  .iHZGIy { display: none; }
+}
+.jsmhhX { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; transition: opacity 500ms 200ms; pointer-events: none; opacity: 0; }
+.jsmhhW { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; transition: opacity 500ms 200ms; pointer-events: none; opacity: 1; }
+.hyFRqP { width: var(--bodyTextWidth); max-width: 100%; margin: 0px auto; font-size: calc(17.3976px + 0.150602svw); font-family: Ivar; text-indent: var(--articleGutterWidth); }
+.hyFRqP > svg { margin-right: 8px; }
+@media (min-width: 900px) {
+  .hyFRqP { text-align: justify; }
+}
+.eMwiOQ { width: var(--bodyTextWidth); max-width: 100%; margin: 0px auto; font-size: calc(17.3976px + 0.150602svw); font-family: Ivar; text-indent: 0px; }
+.eMwiOQ > svg { margin-right: 8px; }
+@media (min-width: 900px) {
+  .eMwiOQ { text-align: justify; }
+}
+.iWCAia { padding: 40px 0px 0px; }
+@media (min-width: 900px) {
+  .iWCAia { padding-top: 160px; }
+}
+.fEFyBq { position: absolute; display: none; left: -16px; top: 0px; height: 100%; width: 32px; border-left: 1px dashed rgba(0, 0, 0, 0.133); border-right: 1px dashed rgba(0, 0, 0, 0.133); transition: transform 500ms; z-index: 2; pointer-events: none; }
+.fEFyBq::after { content: ""; position: absolute; left: calc(50% - 0.5px); top: 0px; width: 1px; height: 100%; background: rgba(0, 0, 0, 0.133); }
+@media (min-width: 900px) {
+  .fEFyBq { display: block; }
+}
+.fGMTyo { position: relative; padding: 24px 12px; transition: transform 500ms; background: rgb(239, 239, 239); }
+@media (min-width: 900px) {
+  .fGMTyo { margin-left: 50%; width: 50%; padding: 24px 36px; }
+}
+.fGMTyo::after { content: ""; position: absolute; left: -100%; top: 0px; width: 200%; }
+.gzepLl { position: fixed; right: -10px; top: 0px; width: 24px; height: 100lvh; z-index: 200; overflow: hidden; transform: scaleX(0.5); transition: transform 200ms; transform-origin: 0px 0px; pointer-events: none; }
+.rqhBu { position: absolute; width: 100%; height: 100%; transform-origin: 100% 0px; }
+.eWGRIS { position: absolute; left: -14px; top: 0px; background: white; color: rgb(45, 45, 45); padding: 2px 10px; font-size: 12px; text-transform: uppercase; border-radius: 4px; transition: opacity 250ms; transform-origin: 0px 50%; opacity: 0; pointer-events: none; font-family: "Suisse Mono"; letter-spacing: -0.03em; }
+@media (max-width: 899px) {
+  .eWGRIS { display: none; }
+}
+.jkexmU { font-family: Ivar; font-style: italic; font-size: 12px; text-transform: none; }
+.hNERUl { position: relative; font-size: 1.3rem; line-height: 1.5; color: rgb(45, 45, 45); width: 100%; height: 100lvh; transition: opacity 250ms; }
+.chArhW { fill: rgb(45, 45, 45); }
+.dXHhQh { font-family: "Suisse Mono"; letter-spacing: -0.03em; font-size: 13px; text-transform: uppercase; display: flex; -webkit-box-align: center; align-items: center; -webkit-box-pack: center; justify-content: center; gap: 24px; }
+@media (min-width: 900px) {
+  .dXHhQh { gap: 32px; }
+}
+.jMONqX { font-family: "Cardinal Fruit"; font-size: calc(10px + 5.8vmax + 5.8vmin); line-height: 0.84; letter-spacing: -0.05em; margin: calc(2vmax + 2vmin) 0px 2rem; font-weight: 300; }
+.ctdYie { display: flex; flex-direction: row; align-items: flex-start; -webkit-box-pack: start; justify-content: flex-start; font-family: "Suisse Mono"; letter-spacing: -0.03em; font-size: 13px; text-transform: uppercase; margin: 0px auto 36px; padding: 10px 0px 0px; width: 100%; }
+.jGxplG { display: flex; margin-left: 12px; margin-bottom: 100px; align-items: flex-start; -webkit-box-pack: justify; justify-content: space-between; gap: 12px; width: 100%; }
+@media (min-width: 900px) {
+  .jGxplG { margin-left: 46px; gap: 36px; }
+}
+.hddmEb { flex-basis: 32%; text-align: right; text-decoration: underline; }
+.cSsxhS { display: flex; }
+.bQFkRr { display: flex; flex-direction: column; }
+.jBkrzu { white-space: nowrap; }
+.evToRj { position: absolute; left: calc(50% - 16px); top: 0px; width: 32px; height: 100%; border-left: 1px dashed rgba(45, 45, 45, 0.2); border-right: 1px dashed rgba(45, 45, 45, 0.2); transition: transform 500ms; z-index: 2; pointer-events: none; }
+.evToRj::after { content: ""; position: absolute; left: 50%; top: 0px; width: 1px; height: 100%; background: rgba(45, 45, 45, 0.2); }
+.gKCnEH { position: absolute; left: calc(50% - 16px); top: 0px; width: 32px; height: 100%; border-left: 1px dashed rgba(201, 201, 201, 0.2); border-right: 1px dashed rgba(201, 201, 201, 0.2); transition: transform 500ms; z-index: 2; pointer-events: none; }
+.gKCnEH::after { content: ""; position: absolute; left: 50%; top: 0px; width: 1px; height: 100%; background: rgba(201, 201, 201, 0.2); }
+.NbIFj { position: absolute; left: calc(50% - 16px); top: 0px; width: 32px; height: 100%; border-left: 1px dashed rgba(63, 64, 61, 0.2); border-right: 1px dashed rgba(63, 64, 61, 0.2); transition: transform 500ms; z-index: 2; pointer-events: none; }
+.NbIFj::after { content: ""; position: absolute; left: 50%; top: 0px; width: 1px; height: 100%; background: rgba(63, 64, 61, 0.2); }
+.iSrkvx { position: absolute; left: 0px; bottom: 0px; width: 100%; height: 24px; }
+.iSrkvx::after { content: ""; position: absolute; top: 0px; left: 0px; width: 100%; z-index: 1; border-top: 1px solid; opacity: 0.18; }
+.gcwZfs { position: relative; display: flex; flex-shrink: 0; flex-direction: column; width: 100%; height: 360px; padding: 0px 12px 50px; -webkit-box-pack: justify; justify-content: space-between; font-size: 13px; line-height: 1.5; font-family: "Suisse Mono"; letter-spacing: -0.03rem; text-transform: uppercase; background: rgb(239, 239, 239); color: rgb(63, 64, 61); }
+@media (min-width: 900px) {
+  .gcwZfs { height: 18%; padding: 0px 40px 30px 36px; }
+}
+.gcwZfs a { color: inherit; }
+.cSfwmt { position: relative; padding-top: 16px; display: flex; width: 100%; -webkit-box-pack: justify; justify-content: space-between; padding-bottom: 80px; }
+.cmwDKL { position: relative; border-top: 1px dashed rgba(63, 64, 61, 0.333); padding-top: 8px; display: flex; width: 100%; -webkit-box-pack: justify; justify-content: space-between; }
+.fWJIaQ { border-top: 1px solid rgba(63, 64, 61, 0.2); padding-top: 8px; }
+@media (min-width: 900px) {
+  .fWJIaQ { padding-right: 20vw; }
+}
+@media (max-width: 899px) {
+  .kUDTbx { display: none; }
+}
+.iUEhfN { display: none; }
+@media (min-width: 900px) {
+  .iUEhfN { display: inline; }
+}
+.hotood { background: rgb(13, 14, 20); color: rgb(201, 201, 201); position: sticky; font-family: Ivar; z-index: 0; border-top: 1px solid rgb(13, 14, 20); overflow: hidden; padding-top: 0px; top: 36px; display: flex; flex-direction: column; -webkit-box-pack: justify; justify-content: space-between; padding-bottom: 8px; }
+.cFHlFa { position: relative; display: flex; gap: 31px; width: 100%; height: calc(-58px + 100svh); min-height: 400px; align-items: flex-start; padding-bottom: 24px; }
+.cFHlFa h1 { margin: 0px; line-height: 0.84; }
+.cFHlFa::after { content: ""; border-top: 1px solid rgb(201, 201, 201); margin-top: 12px; position: absolute; bottom: 0px; left: 0px; width: 100%; height: 1px; opacity: 0.2; }
+.cFHlFa > a { width: 50%; height: 100%; text-decoration: none; color: rgb(239, 239, 239); }
+@media (min-width: 900px) {
+  .cFHlFa { padding: 0px 20px 24px 19px; }
+}
+.fRJSlg { font-family: "Suisse Mono"; letter-spacing: -0.03em; font-size: 13px; text-transform: uppercase; display: flex; -webkit-box-pack: justify; justify-content: space-between; gap: 32px; margin: 0px; line-height: 1.4; width: 100%; height: auto; }
+@media (min-width: 900px) {
+  .fRJSlg span { max-width: 50%; }
+}
+.cMQSpE { position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; -webkit-box-pack: end; justify-content: flex-end; cursor: pointer; transition: background 200ms; padding: 10px; }
+.cMQSpE h1 { position: fixed; top: 55px; }
+.cMQSpE span { align-self: flex-end; }
+.cMQSpE:hover { background: rgb(201, 201, 201); color: rgb(13, 14, 20); }
+@media (min-width: 900px) {
+  .cMQSpE { padding: 20px; }
+}
+.irdeKz { position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; -webkit-box-pack: end; justify-content: flex-end; cursor: pointer; transition: background 200ms; padding: 12px; }
+.irdeKz h1 { align-self: flex-end; text-align: right; }
+.irdeKz .sc-85a9ff74-2 { position: fixed; top: 55px; width: calc(50% - 44px); text-align: right; }
+@media (min-width: 900px) {
+  .irdeKz .sc-85a9ff74-2 { text-align: left; width: calc(50% - 77px); }
+}
+.irdeKz:hover { background: rgb(201, 201, 201); color: rgb(13, 14, 20); }
+@media (min-width: 900px) {
+  .irdeKz { padding: 20px 20px 12px; }
+  .irdeKz h1 { margin-right: 12px; }
+}
+.jqGRFE { position: relative; font-size: 20px; line-height: 1.28; color: rgb(45, 45, 45); --articleGutterWidth: 24px; }
+@media (min-width: 900px) {
+  .jqGRFE { --articleGutterWidth: 36px; }
+}
+@media (min-width: 1200px) {
+  .jqGRFE { --articleGutterWidth: 60px; }
+}
+.iQkwXB { position: relative; z-index: 3; background: rgb(239, 239, 239); }
+.kvBwOQ { --bodyTextWidth: 100%; --sidebarWidth: calc(345px + 55 * ((100svw - 400px) / 1328)); padding-top: 0px; margin-top: -100lvh; position: sticky; font-family: Ivar; z-index: 3; border-top: 1px solid rgba(0, 0, 0, 0.133); overflow: hidden; transition: transform 500ms, filter 300ms; cursor: auto; filter: blur(0px); }
+.kvBwOQ::after { content: ""; position: absolute; bottom: 0px; width: 100%; height: 1px; background: rgba(0, 0, 0, 0.133); }
+@media (min-width: 900px) {
+  .kvBwOQ { display: flex; margin-top: -100lvh; transition: transform 500ms; filter: none; transform: translateX(0vw); }
+}
+.ciigTW { top: 0px; left: 18px; height: 100lvh; width: 100%; border-radius: 8px; z-index: 3; transition: transform 500ms, opacity 150ms; transform: translateX(0vw); }
+.ciigTW img { width: 100%; }
+@media (min-width: 900px) {
+  .ciigTW { display: block; position: sticky; left: 18px; width: calc(50% - 18px); }
+}
+.hKlrec { font-family: "Cardinal Fruit"; font-size: calc(40.988px + 0.753012svw); letter-spacing: -0.03em; width: 90%; line-height: 0.95; font-weight: 200; margin: 100px 0px 0px; padding-bottom: 48px; }
+@media (min-width: 900px) {
+  .hKlrec { width: 65%; }
+}
+.ozQRQ { position: relative; width: 100%; }
+.bXLvPH { position: relative; width: 100%; }
+.cNHQGt { width: calc(100% - 36px); position: sticky; top: 35px; left: 36px; transition: transform 300ms, opacity 300ms, visibility 300ms; opacity: 0; visibility: hidden; z-index: 10; overflow: hidden; }
+@media (min-width: 900px) {
+  .cNHQGt { overflow: hidden; margin-top: 0px; transform: translateX(10vw); left: 75%; width: 25svw; z-index: 3; }
+}
+.cUTCvD { position: absolute; right: 0px; width: 24px; height: 100%; transform-origin: 100% 0px; cursor: w-resize; display: block; }
+.cUTCvD::after { content: ""; position: absolute; width: 18px; height: 100%; right: 0px; top: 0px; transition: transform 200ms; background: rgb(45, 45, 45); transform: scaleX(0); transform-origin: 100% 0px; }
+.cUTCvD:hover::after { transform: scaleX(1); }
+.fczaPR { width: 100%; height: 100lvh; overflow: auto; background: rgb(217, 217, 217); position: relative; transition: transform 500ms; scroll-behavior: smooth; transform: translateX(100px); }
+.fczaPR > span:last-of-type aside { padding-bottom: 100px; }
+.exsdfW { z-index: 0; width: 100%; position: relative; padding: 16px 36px; }
+.exsdfW::after { content: ""; position: absolute; top: 0px; left: 36px; width: calc(100% - 72px); border-top: 1px dotted; transition: transform 500ms; opacity: 0.23; }
+.exsdfW::before { content: ""; position: absolute; bottom: 0px; left: 36px; width: calc(100% - 72px); border-top: 1px dotted; z-index: 2; opacity: 0.23; transition: transform 500ms; }
+.ivklmn { width: 100%; position: relative; }
+@media (min-width: 900px) {
+  .ivklmn { width: calc(50% - 36px); }
+}
+.ivdeMS { font-size: calc(25.3735px + 1.65663svw); line-height: 1.2; font-style: italic; font-family: "Cardinal Fruit"; width: 100%; margin: 30px 0px; padding: 0px; text-indent: -8px; cursor: auto; }
+.ivdeMS:hover .sc-89adede8-2 { opacity: 1; }
+@media (min-width: 900px) {
+  .ivdeMS { text-indent: -16px; width: 50%; margin-top: -16px; padding: 0px 18px; }
+}
+.iyLzMs { font-size: 13px; font-style: italic; font-family: Ivar; margin-right: 2px; }
+.kqlmwh { position: relative; display: flex; font-size: 12px; -webkit-box-align: center; align-items: center; margin-bottom: 16px; transition: transform 500ms; }
+@media (min-width: 900px) {
+  .kqlmwh { transform: translateX(0vw); margin-bottom: -16px; }
+}
+.hsCrbB { font-size: 12px; font-family: "Suisse Mono"; letter-spacing: -0.03em; text-transform: uppercase; margin-left: 2px; }
+.cXhRIK { align-items: flex-end; -webkit-box-pack: end; justify-content: flex-end; gap: 72px; transition: transform 500ms; transform-origin: 100% 50%; letter-spacing: -0.09rem; }
+@media (min-width: 900px) {
+  .cXhRIK { transform: scale(1); display: flex; }
+}
+.cakpsQ { position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background: rgb(239, 239, 239); z-index: -1; }
+.jNWMQm { font-size: 12px; font-style: italic; font-family: Ivar; }
+.jqBrEp { position: relative; width: var(--bodyTextWidth); max-width: 100%; margin: 0px auto; font-size: calc(28.3855px + 0.903614svw); line-height: 1.2; font-style: italic; font-family: "Cardinal Fruit"; padding: 40px var(--articleGutterWidth) 40px; letter-spacing: -0.05rem; cursor: auto; }
+.jqBrEp + ul { margin-bottom: 0px; padding-bottom: 0px; }
+.jqBrEp:hover .sc-d3b3cf2a-0 { opacity: 1; }
+/* 全宽居中引文（原站 QuoteCenter，sc-33abaaa2-3）：与 jqBrEp 同款 Cardinal Fruit 斜体，
+   仅顶部 padding 为 0、max-width 95vw */
+main.jqGRFE blockquote.sc-33abaaa2-3 { max-width: 95vw; margin: 0px auto; font-size: calc(28.3855px + 0.903614svw); line-height: 1.2; font-style: italic; font-family: "Cardinal Fruit"; padding: 0px var(--articleGutterWidth) 40px; letter-spacing: -0.05rem; border: 0; }
+.krOMIs { display: block; text-indent: -0.6rem; }
+.fa-doMO { position: absolute; display: none; left: -16px; top: 24px; height: calc(100% - 48px); width: 32px; border-left: 1px dashed rgba(0, 0, 0, 0.133); border-right: 1px dashed rgba(0, 0, 0, 0.133); transition: transform 500ms; z-index: 2; pointer-events: none; }
+.fa-doMO::after { content: ""; position: absolute; left: calc(50% - 0.5px); top: 0px; width: 1px; height: 100%; background: rgba(0, 0, 0, 0.133); }
+@media (min-width: 900px) {
+  .fa-doMO { display: block; }
+}
+.cdVGxi { position: relative; padding: 24px 12px; transition: transform 500ms; display: flex; flex-direction: column; background: rgb(239, 239, 239); }
+.cdVGxi:first-of-type { padding-top: 0px; }
+.cdVGxi:first-of-type .sc-d737b1d0-0 { top: 0px; height: calc(100% - 24px); }
+@media (min-width: 900px) {
+  .cdVGxi { padding: 24px 36px; margin-left: 50%; width: 50%; }
+}
+.cdVGxi::after { content: ""; position: absolute; left: -100%; top: 0px; height: 100%; width: 100%; }
+.jlXZRm { position: relative; cursor: pointer; transition: background 200ms; text-indent: 0px; }
+.jlXZRm:hover { border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor; border-radius: 3px; background: rgb(222, 186, 168); }
+.jlXZRm:hover .sc-373abeac-0 { pointer-events: auto; opacity: 1; }
+.iTrbXd { position: relative; cursor: pointer; transition: background 200ms; text-indent: 0px; }
+.iTrbXd:hover { border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor; border-radius: 3px; background: rgb(214, 211, 203); }
+.iTrbXd:hover .sc-373abeac-0 { pointer-events: auto; opacity: 1; }
+.eXRuNU { position: relative; border-bottom: 1px dotted rgba(0, 0, 0, 0.6); }
+.dJzfKQ { position: relative; display: inline; top: -12px; font-family: "Suisse Mono"; font-size: 9px; }
+.cJtiuO { z-index: 0; width: 100%; position: relative; padding: 8px 12px 12px; }
+.cJtiuO::after { content: ""; position: absolute; top: 0px; left: 36px; width: calc(100% - 72px); border-top: 1px dotted rgba(0, 0, 0, 0.2); }
+.cJtiuO::before { content: ""; position: absolute; bottom: 0px; left: 36px; width: calc(100% - 72px); border-top: 1px dotted rgba(0, 0, 0, 0.2); z-index: 2; }
+@media (min-width: 900px) {
+  .cJtiuO { padding: 8px 36px 12px; }
+}
+.FIUZG { width: 100%; transform-origin: 100% 50%; transition: transform 500ms; position: relative; }
+@media (min-width: 900px) {
+  .FIUZG { transform: scale(1); }
+}
+.gbcAfw { font-size: 13px; font-style: italic; font-family: Ivar; margin-right: 2px; }
+.khPiaF { position: relative; display: flex; font-size: 12px; -webkit-box-align: center; align-items: center; margin-bottom: 16px; transition: transform 500ms; }
+@media (min-width: 900px) {
+  .khPiaF { transform: translateX(0vw); }
+}
+.joxOCl { font-size: 12px; font-family: "Suisse Mono"; letter-spacing: -0.03em; text-transform: uppercase; margin-left: 2px; }
+.fznOXh { position: absolute; background: rgb(239, 239, 239); left: 0px; top: 0px; width: 100%; height: 100%; }
+.sFyhb { position: relative; padding: 40px 12px 24px; transition: transform 500ms; background: rgb(239, 239, 239); z-index: 1; }
+@media (min-width: 900px) {
+  .sFyhb { transform: translateX(0vw); width: 100%; padding: 24px calc(25% + 36px); }
+}
+.hMtvNY { padding-top: 40px; }
+.gdkPHM { max-width: 95vw; margin: 0px auto; font-size: calc(25.3735px + 1.65663svw); line-height: 1.2; font-style: italic; font-family: "Cardinal Fruit"; padding: 0 var(--articleGutterWidth) 40px; letter-spacing: -0.05rem; transition: transform 500ms; cursor: auto; }
+.gdkPHM:hover .sc-33abaaa2-2 { opacity: 1; }
+@media (min-width: 900px) {
+  .gdkPHM { margin: 0px -80px; transform: scale(1); padding: 0px 0px 40px; text-align: center; }
+}
+@media (min-width: 1200px) {
+  .gdkPHM { margin: 0px -150px; }
+}
+.eynBCy { position: fixed; top: 0px; z-index: -1; display: flex; flex-direction: column; -webkit-box-pack: start; justify-content: flex-start; -webkit-box-align: center; align-items: center; text-align: center; background: rgb(239, 239, 239); width: 100%; height: 100lvh; padding: calc(40px + 2vmax + 2vmin) calc(12px); }
+@media (min-width: 900px) {
+  .eynBCy { padding: calc(30px + 2vmax + 2vmin) calc(5vmax + 5vmin); }
+}
+.cicOGb { opacity: 0; animation: 700ms ease-in-out 0s 1 normal forwards running fadein; }
+@-webkit-keyframes fadein { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadein { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.bCheez { font-family: "Cardinal Fruit"; font-size: calc(20px + 5vmax + 5vmin); line-height: 0.88; letter-spacing: -0.05em; margin: calc(1vmax + 1vmin) 0px 1rem; font-weight: 300; }
+.dghdKu { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; }
+.kYXUuY { display: flex; flex-direction: row; -webkit-box-align: center; align-items: center; -webkit-box-pack: center; justify-content: center; font-family: "Suisse Mono"; font-size: 13px; text-transform: uppercase; letter-spacing: -0.03rem; margin: 0px auto 36px; padding: 10px 0px 0px; width: 100%; }
+.cbFIJp { position: fixed; bottom: 0px; width: 100%; height: 32px; border-top: 1px solid rgba(45, 45, 45, 0.2); background: rgb(239, 239, 239); color: rgb(45, 45, 45); z-index: 15; display: flex; gap: 6px; -webkit-box-align: center; align-items: center; -webkit-box-pack: justify; justify-content: space-between; padding-right: 12px; padding-left: 12px; transition: background 300ms, height 300ms; }
+@media (min-width: 900px) {
+  .cbFIJp { padding-left: 32px; padding-right: 32px; }
+  .cbFIJp:hover { height: 50px; }
+  .cbFIJp::after { content: ""; position: absolute; left: 0px; width: 19px; border-right: 1px solid rgba(45, 45, 45, 0.2); height: 100%; }
+  .cbFIJp::before { content: ""; position: absolute; right: 0px; width: 19px; border-left: 1px solid rgba(45, 45, 45, 0.2); height: 100%; }
+}
+.iFzDgK { position: relative; display: flex; padding: 3.5px 0px; width: 100%; -webkit-box-align: center; align-items: center; -webkit-box-pack: start; justify-content: flex-start; font-size: 12px; letter-spacing: -0.055em; font-family: "Suisse Mono"; z-index: 301; transition: height 200ms; }
+.hJWrNc { position: relative; width: 100%; display: flex; -webkit-box-align: center; align-items: center; -webkit-box-pack: start; justify-content: flex-start; gap: 8px; flex-wrap: nowrap; }
+.bgQBPx { white-space: nowrap; display: flex; gap: 2px; -webkit-box-align: center; align-items: center; user-select: none; cursor: pointer; }
+.bsOOoM { position: relative; white-space: nowrap; display: block; flex-shrink: 0; top: -1px; }
+.bsOOoM svg { display: inline-block; margin-left: 2px; margin-top: 1px; }
+.hZEwGC { white-space: nowrap; display: flex; margin-top: -2px; }
+.eqVYgn { background: transparent; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; color: inherit; font-size: inherit; font-family: inherit; letter-spacing: inherit; padding: 1.75px 0px 0px; margin: 0px; outline: none; cursor: pointer; width: 100%; appearance: none; }
+.fEEpCl { position: fixed; left: 0px; top: 0px; width: 100%; height: 100lvh; z-index: 2000; opacity: 0.04; transition: opacity 500ms; pointer-events: none; background: url("../assets/paper.jpg") 0% 0% / 200px 200px; }
+
+
+/* =========================================================================
+   本站叠加层（不改动上面的原站规则）
+   —— ① 静态化（原站靠 JS 做 hero 固定 + 文章上滑，这里改回文档流）
+       ② 语言切换  ③ 注释卡  ④ 阅读进度 / 章节导航
+   ========================================================================= */
+
+/* ---- ① 静态化：hero 段改为常规文档流，文章不再负 margin 上滑 ---- */
+main.jqGRFE { padding-top: 36px; }   /* 让出固定顶栏 */
+main.jqGRFE section.eynBCy {
+  position: relative;
+  height: auto;
+  min-height: 100svh;
+  padding: calc(60px + 2vmax + 2vmin) 5vmin calc(40px + 2vmax + 2vmin);
+}
+main.jqGRFE article.kvBwOQ {
+  margin-top: 0;
+  position: relative;
+  transform: none;
+  filter: none;
+}
+main.jqGRFE article.kvBwOQ::after { background: rgba(0,0,0,.133); }
+/* 3D 画布容器：静态版默认隐藏，加载成功后才显示（由 inner.js 加类） */
+main.jqGRFE .ciigTW { display: none; }
+main.jqGRFE .ciigTW.is-3d { display: block; }
+/* 侧栏：原站是 JS 弹出的笔记抽屉，本站改用行内弹卡，故隐藏空侧栏 */
+main.jqGRFE aside.cNHQGt { display: none; }
+
+/* hero 里的绝对定位层不再需要 */
+main.jqGRFE .dghdKu { position: absolute; }
+
+/* 整幅插图（FullWidthSection）：原站用 JS 把遮罩层移出，静态版直接隐藏遮罩 */
+main.jqGRFE .cJtiuO .fznOXh { display: none; }
+main.jqGRFE .cJtiuO img { width: 100%; height: auto; display: block; border-radius: 3px; }
+
+/* 带图引文：QuoteImageSplit —— 引文在整幅图上方，沿用原站 jqBrEp 大引文体 */
+main.jqGRFE .qfig-split .jqBrEp { padding-top: 28px; padding-bottom: 28px; }
+/* 带图引文：QuoteThumbnail —— 小图 + 居中引文，桌面端区块右移收窄 */
+main.jqGRFE .qfig-thumb { padding: 32px 0; position: relative; }
+main.jqGRFE .qfig-thumb::after,
+main.jqGRFE .qfig-thumb::before { content: ""; position: absolute; left: 12px; right: 12px;
+  border-top: 1px dotted #0003; }
+main.jqGRFE .qfig-thumb::before { top: 8px; }
+main.jqGRFE .qfig-thumb::after { bottom: 8px; }
+@media (min-width: 900px) {
+  main.jqGRFE .qfig-thumb { padding: 32px calc(25% + 36px); }
+  main.jqGRFE .qfig-thumb::after,
+  main.jqGRFE .qfig-thumb::before { left: 36px; right: 36px; }
+}
+main.jqGRFE .qfig-thumb .qimg-thumb { width: 80%; margin: 20px auto 30px; }
+main.jqGRFE .qfig-thumb .qquote-thumb { width: auto; max-width: 100%; margin: 0 auto;
+  padding: 0 12px; text-align: center; font-size: calc(20px + 0.5vw); }
+
+/* 文章区块：原站是右半幅 50% 宽 */
+@media (min-width: 900px) {
+  main.jqGRFE .fGMTyo { margin-left: 50%; width: 50%; }
+  main.jqGRFE .cdVGxi { margin-left: 50%; width: 50%; }
+}
+
+/* ---- 双语显隐：默认英文（与原站一致），切中文只显示中文，双语则都显示 ----
+   用 .lang-en / .lang-zh 两个类，不设 display，让块级/行内各按默认，
+   只做「隐藏」，避免把 <p> 设成 inline 破坏版面。 */
+html[data-lang="en"] .lang-zh { display: none; }
+html[data-lang="zh"] .lang-en { display: none; }
+/* bi 模式两者都显示（默认即可） */
+html[data-lang="bi"] .lang-zh { display: block; }
+html[data-lang="bi"] .lang-zh.inl { display: inline; }
+/* 无英文原版的页面：中文始终显示，不受语言开关影响 */
+p.zh-only { display: block; }
+
+/* 中文段落只换字形栈；缩进/对齐/字号/行高一律沿用原站 .hyFRqP 的
+   text-indent: var(--articleGutterWidth) + text-align: justify，
+   保证中文版式与英文版式完全一致（不再另设 2em）。 */
+html[data-lang="zh"] p.hyFRqP,
+html[data-lang="zh"] .hKlrec,
+html[data-lang="zh"] .bCheez,
+.lang-zh, .zh-only {
+  font-family: "Ivar", "Songti SC", "Noto Serif SC", "Source Han Serif SC", serif;
+}
+/* 章节页/序言页的中文巨标：Cardinal Fruit 无中文字形，按比例缩小并用衬线栈 */
+html[data-lang="zh"] .bCheez,
+html[data-lang="bi"] .bCheez .lang-zh {
+  font-family: "Ivar", "Songti SC", "Noto Serif SC", "Source Han Serif SC", serif;
+  font-size: calc(18px + 2.6vmax + 2.6vmin);
+  letter-spacing: 0;
+}
+html[data-lang="zh"] .hKlrec,
+html[data-lang="bi"] .hKlrec .lang-zh {
+  font-family: "Ivar", "Songti SC", "Noto Serif SC", "Source Han Serif SC", serif;
+  font-size: calc(17px + 0.9vmax);
+}
+
+/* 双语模式下：英文段与中文段之间留一点间距，中文段落取消悬挂缩进感 */
+html[data-lang="bi"] p.hyFRqP.lang-zh { margin-top: .2em; }
+html[data-lang="bi"] p.hyFRqP.lang-en { opacity: .82; }
+
+/* 双语模式：大标题（hero .bCheez / 文章题 .hKlrec）中英必须堆叠为块，
+   否则行内的英文 span（特大字号 + line-height:.95 会有字形溢出）与块级中文
+   span 重叠。这里把两者都设 block，中文加行高与上间距，确保不叠字。 */
+html[data-lang="bi"] .bCheez .lang-en,
+html[data-lang="bi"] .hKlrec .lang-en { display: block; }
+html[data-lang="bi"] .bCheez .lang-zh,
+html[data-lang="bi"] .hKlrec .lang-zh { display: block; line-height: 1.12; margin-top: .18em; }
+/* 双语模式下大标题行高略放宽，避免英文 Display 字形的紧密行距把中文挤上来 */
+html[data-lang="bi"] .bCheez { line-height: 1.02; }
+html[data-lang="bi"] .hKlrec { line-height: 1.05; }
+
+/* ---- 语言开关（追加进顶栏右侧） ---- */
+.langsw { display: inline-flex; align-items: center; gap: 6px;
+  font-family: "Suisse Mono"; font-size: 11px; text-transform: uppercase;
+  letter-spacing: -0.02em; }
+.langsw button { background: none; border: 0; padding: 2px 4px; cursor: pointer;
+  font: inherit; color: inherit; opacity: 0.45; border-radius: 4px; }
+.langsw button[aria-pressed="true"] { opacity: 1; text-decoration: underline; }
+.langsw button:hover { opacity: 0.85; }
+
+/* ---- 注释：hover/点击高亮短语弹出注释卡 ---- */
+.ann-pop {
+  position: absolute; z-index: 60; width: 300px; max-width: 74vw;
+  left: 0; top: calc(100% + 8px);
+  background: #f4f2ee; border: 1px solid rgba(0,0,0,.16);
+  box-shadow: 0 12px 40px rgba(0,0,0,.18);
+  padding: 10px 10px 12px; border-radius: 4px;
+  opacity: 0; visibility: hidden; transform: translateY(6px);
+  transition: opacity .18s, transform .18s, visibility .18s;
+  pointer-events: none;
+}
+a[data-ann]:hover .ann-pop,
+a[data-ann].is-open .ann-pop { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+.ann-pop img { width: 100%; height: auto; display: block; border-radius: 2px; background: #fff; }
+.ann-pop .ann-cap {
+  font-family: "Suisse Mono"; font-size: 10px; letter-spacing: -0.01em;
+  text-transform: uppercase; margin-top: 8px; opacity: .75; line-height: 1.35;
+}
+.ann-pop .ann-body {
+  font-family: "Ivar"; font-size: 13px; line-height: 1.45; margin-top: 6px;
+  text-indent: 0; text-align: left; display: block;
+}
+.ann-pop .ann-pop-h {
+  font-family: "Suisse Mono"; font-size: 11px; letter-spacing: .02em;
+  text-transform: uppercase; display: block; line-height: 1.3;
+  padding-bottom: 6px; margin-bottom: 6px;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+.ann-pop .ann-note {
+  font-family: "Ivar"; font-size: 13px; line-height: 1.5; margin: 0 0 8px;
+  text-indent: 0; text-align: left; display: block; color: #1a1a1a;
+}
+
+/* ---- Type A 画布图：贴正文右侧、随滚动切换的页边插图（宽屏） ---- */
+.cv-strip {
+  display: none; position: fixed; right: 22px; top: 50%;
+  transform: translateY(-50%); width: 232px; max-width: 22vw;
+  z-index: 4; opacity: 0; transition: opacity .35s; pointer-events: none;
+}
+.cv-strip.is-on { opacity: 1; }
+.cv-strip-img {
+  width: 100%; height: auto; display: block; border-radius: 2px;
+  background: #fff; box-shadow: 0 10px 36px rgba(0,0,0,.18);
+}
+.cv-strip-cap {
+  display: block; margin-top: 8px; font-family: "Suisse Mono"; font-size: 10px;
+  letter-spacing: .02em; text-transform: uppercase; opacity: .7; line-height: 1.3;
+}
+@media (min-width: 1320px) {
+  .cv-strip { display: block; }
+  main.jqGRFE .bXLvPH { padding-right: 272px; }
+}
+
+/* 注释锚点：原站是虚线下划线 + 上标数字，这里补一个可点态 */
+a[data-ann] { text-decoration: none; color: inherit; }
+a[data-ann].is-open { background: #DEBAA8; border-radius: 3px; }
+
+/* ---- 顶栏内的语言开关位置 ---- */
+.TopNav__lang { display: flex; align-items: center; }
+.sc-211360a0-17.iekrzW { display: flex; align-items: center; gap: 10px; }
+.iekrzW .langsw { display: flex; flex-wrap: nowrap; white-space: nowrap; }
+.iekrzW .langsw button { font-family: "Suisse Mono"; font-size: 10px;
+  letter-spacing: -0.03em; text-transform: uppercase; }
+
+/* ---- 图注（原站插图自带 label，这里统一小字） ---- */
+.fig-inline { margin: 28px auto; width: var(--bodyTextWidth); max-width: 100%; }
+.fig-inline img { width: 100%; height: auto; display: block; }
+.fig-inline figcaption {
+  font-family: "Suisse Mono"; font-size: 11px; text-transform: uppercase;
+  letter-spacing: -0.01em; margin-top: 8px; opacity: .7; line-height: 1.4;
+}
+
+/* ---- 阅读进度 ---- */
+.read-progress { position: fixed; top: 0; left: 0; height: 2px; width: 0;
+  background: #2d2d2d; z-index: 999; transition: width .08s linear; }
+
+/* ---- 章节导航（页脚） ---- */
+.chap-pager { width: var(--bodyTextWidth, 100%); max-width: 100%; margin: 64px auto 40px;
+  display: flex; justify-content: space-between; gap: 24px;
+  font-family: "Suisse Mono"; font-size: 12px; text-transform: uppercase; }
+.chap-pager a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,.3); }
+.chap-pager a:hover { border-bottom-color: #000; }
+
+/* ---- 文末 Marginalia 附录：紧凑小卡网格（未能在正文锚定的边注） ---- */
+.mg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  gap: 14px; margin-top: 18px; }
+.mg-card { display: flex; flex-direction: column; gap: 6px; }
+.mg-card img { width: 100%; height: auto; display: block; background: #fff;
+  border: 1px solid rgba(0,0,0,.1); border-radius: 2px; }
+.mg-card .mg-cap { font-family: "Suisse Mono"; font-size: 10px; text-transform: uppercase;
+  letter-spacing: -0.01em; opacity: .72; line-height: 1.35; }
+
+/* ---- 章节小标题 / 倾向编号 / 编号列表（talk-eleven 等专有结构） ---- */
+.sec-h { font-family: "Cardinal Fruit"; font-weight: 300;
+  font-size: calc(18px + 1.1vmax); line-height: 1.05; letter-spacing: -0.03em;
+  margin: 42px 0 14px; }
+.tendency { display: flex; align-items: baseline; gap: 12px;
+  margin: 30px 0 10px; }
+.tendency-n { font-family: "Cardinal Fruit"; font-style: italic;
+  font-size: calc(15px + 0.9vmax); letter-spacing: -0.02em; opacity: .8;
+  min-width: 6.5em; }
+.tendency-t { font-family: "Cardinal Fruit"; font-weight: 300;
+  font-size: calc(15px + 1vmax); line-height: 1.1; letter-spacing: -0.025em; }
+/* 双语模式下：序号列 + 英文行 +（换行）中文行；中文用衬线栈、字号略收 */
+html[data-lang="bi"] .tendency {
+  display: grid; grid-template-columns: 6.5em 1fr;
+  column-gap: 12px; align-items: baseline; }
+html[data-lang="bi"] .tendency .tendency-n { grid-column: 1; }
+html[data-lang="bi"] .tendency .tendency-t.lang-en { grid-column: 2; }
+html[data-lang="bi"] .tendency .tendency-t.lang-zh {
+  grid-column: 2; padding-top: 2px;
+  font-family: "Ivar", "Songti SC", "Noto Serif SC", "Source Han Serif SC", serif;
+  font-size: calc(14px + 0.5vmax); letter-spacing: 0; }
+html[data-lang="zh"] .tendency-t.lang-en { display: none; }
+.li-item { display: flex; align-items: baseline; gap: 10px; margin: 4px 0; }
+.li-n { font-family: "Suisse Mono"; font-size: 10px; opacity: .55;
+  min-width: 1.6em; text-align: right; }
+.li-t { font-family: "Ivar"; font-size: calc(13px + 0.25vmin); line-height: 1.5; }
+/* 双语模式下：编号列 + 英文行 +（换行）中文行 两列网格。
+   注意：不能只靠 flex-basis:100%（父级缺 flex-wrap 时不会换行，会被压成
+   英文/中文并排的窄两列），必须用 grid 明确列位。 */
+html[data-lang="bi"] .li-item {
+  display: grid; grid-template-columns: 1.6em 1fr;
+  column-gap: 10px; align-items: baseline;
+}
+html[data-lang="bi"] .li-item .li-n { grid-column: 1; }
+html[data-lang="bi"] .li-item .li-t.lang-en { grid-column: 2; }
+html[data-lang="bi"] .li-item .li-t.lang-zh {
+  grid-column: 2; padding-top: 3px; color: #5a4632;
+  font-size: calc(13px + 0.25vmin); }
+html[data-lang="zh"] .li-item .li-t.lang-en { display: none; }
+
+/* ---- 插图档案页（Archive）：图片墙 + fig 编号 + 章节名 ---- */
+.ar-page { padding: 0 0 80px; }
+.ar-head { padding: calc(36px + 2vmax) 36px 20px; }
+.ar-title { font-family: "Cardinal Fruit"; font-weight: 300;
+  font-size: calc(20px + 4.4vmax + 4.4vmin); line-height: 0.9;
+  letter-spacing: -0.05em; margin: 0; }
+.ar-sub { font-family: "Suisse Mono"; font-size: 12px; text-transform: uppercase;
+  letter-spacing: -0.03em; opacity: .6; margin-top: 10px; }
+.ar-jump { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 18px;
+  font-family: "Suisse Mono"; font-size: 11px; text-transform: uppercase; }
+.ar-jump a { color: inherit; text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.25); }
+.ar-group { margin-top: 40px; }
+.ar-group-h { font-family: "Suisse Mono"; font-size: 12px; text-transform: uppercase;
+  letter-spacing: -0.03em; padding: 8px 36px 10px;
+  border-top: 1px solid rgba(0,0,0,.2); margin: 0; }
+.ar-grid { columns: 2; column-gap: 0; padding: 12px 18px 0; }
+.ar-cell { break-inside: avoid; margin: 0 18px 30px; }
+.ar-cap { display: flex; justify-content: space-between; gap: 10px;
+  font-family: "Suisse Mono"; font-size: 11px; letter-spacing: -0.03em;
+  text-transform: uppercase; margin-bottom: 6px; }
+.ar-cap .ar-ch { opacity: .55; white-space: nowrap; }
+.ar-cell img { width: 100%; height: auto; display: block; }
+@media (max-width: 899px) { .ar-grid { columns: 1; } }
+
+/* ---- Berkshire Mode（/book）：整本书一页 + 中英对照 ---- */
+.bk-page { padding-top: 36px; }
+.bk-hero { padding: calc(48px + 4vmax) 6vmin 40px; text-align: center; }
+.bk-hero-t { font-family: "Cardinal Fruit"; font-weight: 300;
+  font-size: calc(24px + 5vmax + 5vmin); line-height: 0.9; letter-spacing: -0.05em; }
+.bk-hero-s { font-family: "Cardinal Fruit"; font-weight: 300;
+  font-size: calc(14px + 1.6vmax); line-height: 1.15; letter-spacing: -0.03em;
+  margin-top: 12px; opacity: .8; }
+.bk-hero-note { font-family: "Suisse Mono"; font-size: 11px; text-transform: uppercase;
+  letter-spacing: -0.02em; opacity: .5; margin-top: 18px; }
+.bk-toc { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px;
+  margin-top: 30px; font-family: "Suisse Mono"; font-size: 11px;
+  text-transform: uppercase; letter-spacing: -0.03em; }
+.bk-toc a { color: inherit; text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.22); }
+.bk-sec { max-width: 760px; margin: 0 auto; padding: 60px 6vmin 20px; }
+.bk-sec-head { margin-bottom: 28px; }
+.bk-sec-eyebrow { font-family: "Suisse Mono"; font-size: 11px; text-transform: uppercase;
+  letter-spacing: -0.03em; opacity: .5; }
+.bk-sec-title { font-family: "Cardinal Fruit"; font-weight: 300;
+  font-size: calc(22px + 2.6vmax); line-height: 1; letter-spacing: -0.04em;
+  margin: 8px 0 0; }
+.bk-loc { display: block; font-family: "Suisse Mono"; font-size: 11px;
+  text-transform: uppercase; letter-spacing: -0.03em; opacity: .55; margin-top: 10px; }
+.bk-p { font-family: "Ivar"; font-size: calc(15px + 0.35vmin); line-height: 1.62;
+  margin: 0 0 .1em; text-align: justify; }
+.bk-p.lang-en { opacity: .88; }
+.bk-p.lang-zh { /* 与英文段一致：不另设首行缩进 */ }
+.bk-q { font-family: "Ivar"; font-style: italic; font-size: calc(15px + 0.5vmin);
+  line-height: 1.55; margin: 26px 0; padding-left: 18px;
+  border-left: 2px solid rgba(0,0,0,.18); }
+.bk-q-big { font-size: calc(17px + 0.8vmin); border-left: 0; padding-left: 0;
+  text-align: center; }
+.bk-sec .FullWidthSection { margin: 26px 0; }
+
+/* ---- 没有英文原版的提示 ---- */
+.noen-note { font-family: "Suisse Mono"; font-size: 11px; text-transform: uppercase;
+  letter-spacing: -0.02em; opacity: .6; text-align: center; margin: 8px auto 0; }
+
+
+
+/* =========================================================================
+   序言页（Forewords）：原站为「按作者分色的整幅色带」版式——左侧巨型标题、
+   右侧正文栏（含 runner），左下角为四篇的索引，底部 AUDIOBOOK 条。
+   ========================================================================= */
+main.kVZPgh { padding-top: 36px; --bodyTextWidth: 100%; --articleGutterWidth: 26px;
+  --sidebarWidth: 0; }
+main.kVZPgh .ebzFrl { position: relative; }
+
+main.kVZPgh .hkgqgU {
+  position: relative; display: grid; grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr; column-gap: 6vmin; row-gap: 20px;
+  width: 100%; min-height: 100svh; margin: 0;
+  padding: calc(52px + 2vmax + 2vmin) 5vmin calc(64px + 2vmin);
+  text-align: left; overflow: hidden;
+}
+main.kVZPgh .iSrkvx { display: none; }
+
+/* 左侧巨型标题 */
+main.kVZPgh .hCLBbg {
+  grid-column: 1; grid-row: 1; align-self: start;
+  position: sticky; top: calc(60px + 2vmax);
+  font-family: "Cardinal Fruit"; font-weight: 300; line-height: 0.9;
+  letter-spacing: -0.045em; font-size: calc(18px + 3.4vmax + 3.4vmin);
+  display: block;
+}
+html[data-lang="zh"] main.kVZPgh .hCLBbg,
+html[data-lang="bi"] main.kVZPgh .hCLBbg .lang-zh {
+  font-family: "Ivar", "Songti SC", "Noto Serif SC", serif; letter-spacing: 0;
+  font-size: calc(16px + 2.2vmax + 2.2vmin);
+}
+
+/* runner：CH. 0 // Foreword      WRITTEN BY ... */
+main.kVZPgh .fw-runner {
+  grid-column: 2; grid-row: 1;
+  display: flex; align-items: center; gap: 10px;
+  font-family: "Suisse Mono"; font-size: 11px; text-transform: uppercase;
+  letter-spacing: -0.03em;
+}
+main.kVZPgh .fw-runner svg { width: 13px; height: 14px; flex: none; }
+main.kVZPgh .fw-runner .fw-run-by { margin-left: auto; text-align: right; line-height: 1.25; }
+
+/* 右侧正文栏 */
+main.kVZPgh .iuxGGL { grid-column: 2; grid-row: 2; }
+main.kVZPgh .gVraep p.hyFRqP { text-indent: 1.4em; }
+
+/* 左下角：四篇索引（随滚动贴在视口下沿） */
+main.kVZPgh .kNUhTV {
+  grid-column: 1; grid-row: 2; align-self: end; position: sticky;
+  bottom: calc(64px + 2vmin);
+  font-family: "Ivar"; font-size: 13px; line-height: 1.75;
+}
+main.kVZPgh .kNUhTV .fw-idx-item { display: block; opacity: .8; }
+
+@media (max-width: 899px) {
+  main.kVZPgh .hkgqgU { display: block; padding-top: calc(40px + 2vmax); }
+  main.kVZPgh .hCLBbg { position: static; font-size: calc(30px + 6vmin); }
+  main.kVZPgh .fw-runner { margin: 10px 0 18px; }
+  main.kVZPgh .kNUhTV { margin-top: 28px; }
+}
+
+/* ===================================================================
+   Recommended Reading 页（复刻原站 Writing_RecommendedReading）
+   =================================================================== */
+main.rec-page { display: block; max-width: 760px; margin: 0 auto;
+  padding: calc(48px + 2vmax) 24px calc(64px + 2vmax); }
+.rec-head { text-align: left; margin-bottom: calc(36px + 3vmin); }
+.rec-h1 { font-family: "Cardinal Fruit"; font-weight: 300;
+  font-size: calc(38px + 7vmin); line-height: 0.98; letter-spacing: -0.02em;
+  margin: 0 0 22px; }
+.rec-h1 i { font-style: italic; font-weight: 400; }
+.rec-h1 .lang-zh { display: none; font-size: calc(34px + 5vmin);
+  letter-spacing: 0.04em; margin-top: 6px; }
+html[data-lang="zh"] .rec-h1 .lang-en { display: none; }
+html[data-lang="zh"] .rec-h1 .lang-zh { display: block; }
+html[data-lang="bi"] .rec-h1 .lang-en { display: block; }
+html[data-lang="bi"] .rec-h1 .lang-zh { display: block; font-size: calc(28px + 3vmin);
+  opacity: .8; margin-top: 4px; }
+.rec-quote { font-family: "Ivar"; font-size: calc(15px + 0.6vmin);
+  line-height: 1.55; margin: 0; max-width: 46ch; color: #2d2d2d; }
+.rec-quote .rec-by { display: block; margin-top: 8px; font-style: italic;
+  opacity: .7; font-size: 0.92em; }
+.rec-sec { margin-top: calc(20px + 2vmin); }
+.rec-sec-label { font-family: "Cardinal Fruit"; font-size: calc(17px + 1.4vmin);
+  line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 14px; }
+.rec-sec-label .lang-zh { display: none; margin-top: 4px; letter-spacing: 0.06em; }
+html[data-lang="zh"] .rec-sec-label .lang-en { display: none; }
+html[data-lang="zh"] .rec-sec-label .lang-zh { display: block; }
+html[data-lang="bi"] .rec-sec-label .lang-en { display: block; }
+html[data-lang="bi"] .rec-sec-label .lang-zh { display: block; opacity: .8; }
+.rec-flourish { margin: 6px 0 26px; opacity: .55; }
+.rec-flourish svg { width: 26px; height: auto; }
+.rec-list { display: block; }
+.rec-book { display: grid; grid-template-columns: 26px 1fr; gap: 14px;
+  align-items: start; padding: 18px 0; border-top: 1px solid rgba(45,45,45,0.22);
+  text-decoration: none; color: #2d2d2d; transition: background 200ms; }
+.rec-book:last-child { border-bottom: 1px solid rgba(45,45,45,0.22); }
+.rec-book:hover { background: rgba(45,45,45,0.045); }
+.rec-arrow { flex: none; margin-top: 5px; transform: translateY(2px);
+  transition: transform 200ms; }
+.rec-book:hover .rec-arrow { transform: translate(3px, -1px); }
+.rec-book-body { display: block; }
+.rec-title { display: block; font-family: "Ivar"; font-style: italic;
+  font-size: calc(16px + 0.5vmin); line-height: 1.3; }
+.rec-title .lang-zh { display: none; font-style: normal; font-family: "Cardinal Fruit";
+  font-size: 0.92em; opacity: .82; margin-top: 2px; letter-spacing: 0.02em; }
+html[data-lang="zh"] .rec-title .lang-en { display: none; }
+html[data-lang="zh"] .rec-title .lang-zh { display: block; }
+html[data-lang="bi"] .rec-title .lang-en { display: block; }
+html[data-lang="bi"] .rec-title .lang-zh { display: block; }
+.rec-meta { display: block; margin-top: 4px; font-family: "Suisse Mono";
+  font-size: 11px; letter-spacing: -0.01em; color: #555; }
+.rec-author .lang-zh { display: none; }
+html[data-lang="zh"] .rec-author .lang-en { display: none; }
+html[data-lang="zh"] .rec-author .lang-zh { display: inline; }
+html[data-lang="bi"] .rec-author .lang-en { display: inline; }
+html[data-lang="bi"] .rec-author .lang-zh { display: inline; opacity: .75;
+  margin-left: 7px; }
+.rec-pub { opacity: .7; }
+.rec-pub::before { content: "·"; margin: 0 7px 0 6px; opacity: .6; }
+@media (max-width: 899px) {
+  main.rec-page { padding: calc(40px + 2vmax) 18px 56px; }
+  .rec-book { grid-template-columns: 22px 1fr; gap: 11px; }
+}
