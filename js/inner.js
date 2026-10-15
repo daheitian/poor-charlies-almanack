@@ -56,11 +56,18 @@
   function place(a) {
     var pop = a.querySelector(".ann-pop");
     if (!pop) return;
+    // 窄屏：注释卡由 CSS 变成底部浮层，必须清掉宽屏留下的内联定位，否则会 Cover 掉 fixed
+    if (window.matchMedia("(max-width: 899px)").matches) {
+      pop.style.left = "";
+      pop.style.right = "";
+      return;
+    }
     var r = a.getBoundingClientRect();
+    var pw = pop.offsetWidth || 300;
     pop.style.left = "0";
     pop.style.right = "auto";
     // 右溢则翻到左侧
-    if (r.left + 320 > window.innerWidth) {
+    if (r.left + pw > window.innerWidth - 8) {
       pop.style.left = "auto";
       pop.style.right = "0";
     }

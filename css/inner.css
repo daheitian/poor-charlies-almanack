@@ -395,6 +395,8 @@ main.jqGRFE .dghdKu { position: absolute; }
 /* 整幅插图（FullWidthSection）：原站用 JS 把遮罩层移出，静态版直接隐藏遮罩 */
 main.jqGRFE .cJtiuO .fznOXh { display: none; }
 main.jqGRFE .cJtiuO img { width: 100%; height: auto; display: block; border-radius: 3px; }
+/* bk-page（book.html）等非 jqGRFE 页也有 FullWidthSection：图片约束到容器宽，防止窄屏裁切 */
+.FullWidthSection img { width: 100%; height: auto; display: block; border-radius: 3px; }
 
 /* 带图引文：QuoteImageSplit —— 引文在整幅图上方，沿用原站 jqBrEp 大引文体 */
 main.jqGRFE .qfig-split .jqBrEp { padding-top: 28px; padding-bottom: 28px; }
@@ -797,4 +799,62 @@ html[data-lang="bi"] .rec-author .lang-zh { display: inline; opacity: .75;
 @media (max-width: 899px) {
   main.rec-page { padding: calc(40px + 2vmax) 18px 56px; }
   .rec-book { grid-template-columns: 22px 1fr; gap: 11px; }
+}
+
+/* =========================================================================
+   ⑥ 移动端适配层（≤899px）—— 覆盖上面的原站规则
+   实测（Chrome headless, 390×844）：原站规则在窄屏存在多处横向溢出，
+   根因分别是 ①logo 定宽 304px 顶出语言开关 ②hero 字号用 vmax+vmin 算得过大
+   ③nowrap 元信息行不能收缩 ④注释卡 absolute 跟随锚点会移出视口。
+   ========================================================================= */
+@media (max-width: 899px) {
+  /* 0) 兜底：任何残余溢出都不产生横向滚动；锁住 iOS 横屏字体放大 */
+  html, body { overflow-x: hidden; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+  /* 1) 顶栏：原站 logo 固定 304px，窄屏会把右侧语言开关挤出屏幕 */
+  .jA-dGqI .TopNav__logo { width: auto; max-width: 46vw; }
+  .dXXnC { width: 100%; max-width: 46vw; }
+  .kAQLmg { min-width: 0; }
+  .sc-211360a0-17.iekrzW { width: auto; gap: 4px; }
+  .langsw { gap: 2px; }
+  .langsw button { padding: 8px 5px 6px; font-size: 10px; }  /* 触控目标 */
+
+  /* 2) hero 大标题：原站 vmax+vmin 在手机上算到 80px+，需收敛且允许折行 */
+  .bCheez, .jMONqX {
+    font-size: clamp(30px, 10.5vw, 54px) !important;
+    line-height: 1.02; letter-spacing: -0.03em;
+    overflow-wrap: break-word; word-break: break-word;
+  }
+  .kYXUuY { flex-wrap: wrap; row-gap: 6px; }
+  main.jqGRFE section.eynBCy {
+    padding-left: 18px; padding-right: 18px;
+    padding-top: calc(44px + 2vmax + 2vmin);
+  }
+
+  /* 3) 文章元信息行（fig 图标 + 说明）：nowrap 子项撑宽 flex 容器 */
+  .ctdYie { flex-wrap: wrap; }
+  .jGxplG { flex-wrap: wrap; gap: 2px 10px; }
+  .hddmEb { flex-basis: auto; text-align: left; }
+  .jBkrzu { white-space: normal; }
+
+  /* 4) 推荐阅读：长英文书名单词不折行 */
+  .rec-title { overflow-wrap: break-word; word-break: break-word; }
+
+  /* 5) 注释卡 → 底部浮层：与锚点位置解耦，永不被视口裁切 */
+  .ann-pop {
+    position: fixed; top: auto; bottom: 46px;
+    left: 12px; right: 12px; width: auto; max-width: none;
+    max-height: 60vh; overflow-y: auto; z-index: 400;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, .26);
+  }
+  .ann-pop .ann-body, .ann-pop .ann-note { font-size: 14px; }
+}
+
+/* 超窄屏（≤400px）再收一档：触控行距与网格 */
+@media (max-width: 400px) {
+  .jA-dGqI .TopNav__logo, .dXXnC { max-width: 40vw; }
+  .mg-grid { grid-template-columns: 1fr; }
+  .chap-pager { gap: 12px; }
 }

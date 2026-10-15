@@ -361,3 +361,32 @@ html[data-lang="zh"] .beYuRg { margin-bottom: 0; padding: 2px 4px 3px 2px; }
 }
 .langsw button:hover { opacity: 0.7; }
 .langsw button.on { opacity: 1; }
+
+/* =========================================================================
+   移动端适配层（≤899px）—— 覆盖上面的原站规则
+   实测（Chrome headless, 390×844）：封面目录横向溢出 93px。
+   根因：Chapters 行用 --chapterFontSize: 32.5vw、Talks 行用 --talkFontSize:
+   21.2vw，两者在原站只在 min-width:900 时才收小，窄屏既不折行也不缩小。
+   ========================================================================= */
+@media (max-width: 899px) {
+  html, body { overflow-x: hidden; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+  /* 目录两行：允许折行 + 收敛字号 */
+  .gdRwUm {
+    flex-wrap: wrap; column-gap: 6px; row-gap: 2px;
+    --chapterFontSize: calc(12.2vw); letter-spacing: calc(-0.35vw);
+  }
+  .ilUHHm {
+    flex-wrap: wrap; row-gap: 2px; column-gap: 4px;
+    --talkFontSize: calc(6.2vw); letter-spacing: calc(-0.2vw);
+    margin-left: 0;
+  }
+  .hMwXdY span, .fFmVoE span { padding-left: 0.4vw; padding-right: 0.4vw; }
+  .eSLEUS { padding: 0 2px; }
+}
+
+@media (max-width: 400px) {
+  .gdRwUm { --chapterFontSize: calc(11vw); }
+  .ilUHHm { --talkFontSize: calc(5.6vw); }
+}
