@@ -305,6 +305,12 @@ body { background: rgb(239, 239, 239); margin: 0px; padding: 0px; font-family: "
 .i18n-zh { display: none; }
 html[data-lang="zh"] .i18n-en { display: none; }
 html[data-lang="zh"] .i18n-zh { display: inline; }
+/* 英文模式：仅英文（默认态的显式声明，防止被 bi 规则串扰） */
+html[data-lang="en"] .i18n-en { display: inline; }
+html[data-lang="en"] .i18n-zh { display: none; }
+/* 中英对照：英文与中文并列显示 */
+html[data-lang="bi"] .i18n-en { display: inline; }
+html[data-lang="bi"] .i18n-zh { display: inline; }
 
 /* 中文模式下的排版补偿：原站 line-height 0.84 是给拉丁字面调的，
    方块字按这个行距会贴行。只放宽「文字块」的行距并略收字号，
